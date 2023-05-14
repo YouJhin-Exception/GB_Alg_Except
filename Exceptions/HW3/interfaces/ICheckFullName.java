@@ -1,5 +1,5 @@
 package Exceptions.HW3.interfaces;
 
 public interface ICheckFullName {
-    public boolean checkFullName (String[] fullName);
+    boolean checkFullName (String[] fullName);
 }

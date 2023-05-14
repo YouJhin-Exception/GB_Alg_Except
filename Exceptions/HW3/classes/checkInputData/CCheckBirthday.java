@@ -8,16 +8,16 @@ public class CCheckBirthday extends ACheckData {
     public boolean checkElement(String data) {
         String[] inputData = data.split("\\.");
         // проверка формата 00.00.0000
-        if (inputData.length != 3 || inputData[0].length()!=2 || inputData[1].length()!=2 || inputData[2].length()!=4)
+        if (inputData.length != 3 || inputData[0].length() != 2 || inputData[1].length() != 2 || inputData[2].length() != 4)
             throw new BirthdayFormatException();
         // проверка на цифры
-        for (String s: inputData) {
-            for (int i = 0; i < s.length() ; i++) {
+        for (String s : inputData) {
+            for (int i = 0; i < s.length(); i++) {
                 if (!(Character.isDigit(s.charAt(i))))
                     throw new BirthdayFormatException();
 
             }
         }
-            return true;
+        return true;
     }
 }
